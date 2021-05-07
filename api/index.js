@@ -49,4 +49,8 @@ server.post('/api/refresh', (req, res) => {
     })
 })
 
+server.get('/', (req, res) => {
+    res.send('Welcome to a (almost) blank webpage.')
+})
+
 module.exports = server;
