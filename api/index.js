@@ -10,7 +10,7 @@ server.use(express.json());
 // wrapper for Spotify Web API
 // used to simplify authentication
 const spotifyApi = new spotifyWebApiNode({
-    redirectUri: 'http://localhost:3000/',
+    redirectUri: 'https://young-spotify.vercel.app/',
     clientId: '8fdd97d3ea674907a02f38f39f755391',
     clientSecret: process.env.CLIENT_SECRETE
 })
