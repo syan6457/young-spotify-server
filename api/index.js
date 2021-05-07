@@ -12,7 +12,7 @@ server.use(express.json());
 const spotifyApi = new spotifyWebApiNode({
     redirectUri: 'http://localhost:3000/',
     clientId: '8fdd97d3ea674907a02f38f39f755391',
-    clientSecret: '7f7c3a5737fc4aa1a7f41a88919f2339'
+    clientSecret: process.env.CLIENT_SECRETE
 })
 
 // Spotify Login
