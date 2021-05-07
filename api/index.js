@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const spotifyWebApiNode = require('spotify-web-api-node');
 
-// creating the express server
+// creating an express server
 const server = express();
 server.use(cors());
 server.use(express.json());
@@ -15,7 +15,8 @@ const spotifyApi = new spotifyWebApiNode({
     clientSecret: '7f7c3a5737fc4aa1a7f41a88919f2339'
 })
 
-server.post('/login', (req, res) => {
+// Spotify Login
+server.post('/api/login', (req, res) => {
     const code = req.body.code;
 
     spotifyApi.authorizationCodeGrant(code)
@@ -31,7 +32,8 @@ server.post('/login', (req, res) => {
         })
 })
 
-server.post('/refresh', (req, res) => {
+// Refresh Access Token
+server.post('/api/refresh', (req, res) => {
     const refreshToken = req.body.refreshToken;
 
     // supplying the wrapper the refresh token
