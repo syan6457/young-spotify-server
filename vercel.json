@@ -1,14 +1,16 @@
 {
     "rewrites": [
         {
-            "source": "/api/(.*)",
-            "destination": "/api"
-        }
-    ],
-    "routes": [
-        {
             "src": "/",
             "dest": "/api"
-        }
+        },
+        {
+            "src": "/login",
+            "dest": "/api/login"
+        },
+        {
+            "src": "/refresh",
+            "dest": "/api/refresh"
+        }        
     ]
 }
