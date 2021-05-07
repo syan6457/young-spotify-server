@@ -1,16 +1,16 @@
 {
     "rewrites": [
         {
-            "src": "/",
-            "dest": "/api"
+            "source": "/",
+            "destination": "/api"
         },
         {
-            "src": "/login",
-            "dest": "/api/login"
+            "source": "/login",
+            "destination": "/api/login"
         },
         {
-            "src": "/refresh",
-            "dest": "/api/refresh"
+            "source": "/refresh",
+            "destination": "/api/refresh"
         }        
     ]
 }
