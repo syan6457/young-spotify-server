@@ -15,20 +15,6 @@ const spotifyApi = new spotifyWebApiNode({
     clientSecret: process.env.CLIENT_SECRETE
 })
 
-// cors preflight
-server.options('/login', (req, res) => {
-    res.sendStatus(200);
-})
-server.options('/refresh', (req, res) => {
-    res.sendStatus(200);
-})
-server.options('/api/login', (req, res) => {
-    res.sendStatus(200);
-})
-server.options('/api/refresh', (req, res) => {
-    res.sendStatus(200);
-})
-
 // Spotify Login
 server.post('/api/login', (req, res) => {
     const code = req.body.code;
